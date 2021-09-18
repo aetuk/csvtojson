@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="csvtojson.AppTest" time="0.061" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="csvtojson.AppTest" time="0.048" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -18,7 +18,7 @@
     <property name="user.country" value="GB"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Apps\JDK64\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\aetuk\AppData\Local\Temp\surefire2551758075218942794\surefirebooter8573779400058749659.jar C:\Users\aetuk\AppData\Local\Temp\surefire2551758075218942794 2021-09-18T23-29-53_813-jvmRun1 surefire3951459696773208194tmp surefire_01434088778882714360tmp"/>
+    <property name="sun.java.command" value="C:\Users\aetuk\AppData\Local\Temp\surefire6585507915075942649\surefirebooter369634975568211980.jar C:\Users\aetuk\AppData\Local\Temp\surefire6585507915075942649 2021-09-18T23-42-31_081-jvmRun1 surefire1636839566550450504tmp surefire_01031114775490597293tmp"/>
     <property name="surefire.test.class.path" value="C:\Apps\git\csvtojson\target\test-classes;C:\Apps\git\csvtojson\target\classes;C:\Users\aetuk\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\aetuk\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\aetuk\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.12.5\jackson-databind-2.12.5.jar;C:\Users\aetuk\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.12.5\jackson-annotations-2.12.5.jar;C:\Users\aetuk\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.12.5\jackson-core-2.12.5.jar;C:\Users\aetuk\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-csv\2.12.5\jackson-dataformat-csv-2.12.5.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\aetuk"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\aetuk\AppData\Local\Temp\surefire2551758075218942794\surefirebooter8573779400058749659.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\aetuk\AppData\Local\Temp\surefire6585507915075942649\surefirebooter369634975568211980.jar"/>
     <property name="sun.boot.class.path" value="C:\Apps\JDK64\jre\lib\resources.jar;C:\Apps\JDK64\jre\lib\rt.jar;C:\Apps\JDK64\jre\lib\sunrsasign.jar;C:\Apps\JDK64\jre\lib\jsse.jar;C:\Apps\JDK64\jre\lib\jce.jar;C:\Apps\JDK64\jre\lib\charsets.jar;C:\Apps\JDK64\jre\lib\jfr.jar;C:\Apps\JDK64\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -60,5 +60,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="shouldAnswerWithTrue" classname="csvtojson.AppTest" time="0.002"/>
+  <testcase name="shouldAnswerWithTrue" classname="csvtojson.AppTest" time="0.001"/>
 </testsuite>
