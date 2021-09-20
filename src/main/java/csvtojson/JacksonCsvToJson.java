@@ -13,9 +13,27 @@ import com.fasterxml.jackson.dataformat.csv.CsvSchema;
 public class JacksonCsvToJson {
 
     public static void main(String[] args) throws Exception {
-        File input = new File("/x/data.csv");
-        File output = new File("/x/data.json");
+       
+		String errorMessage = "You need to specify a file and path, for example : java -jar csvtojson-1.0-SNAPSHOT-jar-with-dependencies.jar /x/data.csv /x/data.json";
+		
+		
+		 if (args.length < 1)
+		 {
+			System.out.println(errorMessage);
+			return;
+		 }
+			 
+		if ((args[0] == null || args[0].trim().isEmpty()) 
+			 &&
+			(args[1] == null || args[1].trim().isEmpty()))
+		 {
+			System.out.println(errorMessage);
+			return;
+		 }
 
+		File input = new File(args[0]);
+        File output = new File(args[1]);
+		
         List<Map<?, ?>> data = readObjectsFromCsv(input);
         writeAsJson(data, output);
     }
