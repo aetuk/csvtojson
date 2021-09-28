@@ -1,0 +1,1 @@
+for /F "tokens=*" %%A in (batchdata.output1.json) do curl -H "Content-Type: application/json" -X POST http://132.145.65.68:8080/bre/postdatajsonp -d %%A >> output.json
