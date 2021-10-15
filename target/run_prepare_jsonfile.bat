@@ -1,1 +1,0 @@
-jq-win64.exe -c ".[]" batchdata.json > batchdata.output.json

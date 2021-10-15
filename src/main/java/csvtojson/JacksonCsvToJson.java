@@ -10,32 +10,49 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.csv.CsvMapper;
 import com.fasterxml.jackson.dataformat.csv.CsvSchema;
 
+  import org.apache.commons.cli.CommandLine;
+    import org.apache.commons.cli.Option;
+    import org.apache.commons.cli.Options;
+    import org.apache.commons.cli.Option.Builder;
+    import org.apache.commons.cli.CommandLineParser;
+    import org.apache.commons.cli.DefaultParser;
+    import org.apache.commons.cli.ParseException;
+
 public class JacksonCsvToJson {
 
     public static void main(String[] args) throws Exception {
        
-		String errorMessage = "You need to specify a file and path, for example : java -jar csvtojson-1.0-SNAPSHOT-jar-with-dependencies.jar /x/data.csv /x/data.json";
-		
-		
-		 if (args.length < 1)
-		 {
-			System.out.println(errorMessage);
-			return;
-		 }
-			 
-		if ((args[0] == null || args[0].trim().isEmpty()) 
-			 &&
-			(args[1] == null || args[1].trim().isEmpty()))
-		 {
-			System.out.println(errorMessage);
-			return;
-		 }
+	   Options options = new Options();
 
-		File input = new File(args[0]);
-        File output = new File(args[1]);
+        Option input = new Option("input", "input", true, "input csv file path");
+        input.setRequired(true);
+        options.addOption(input);
+
+        Option output = new Option("output", "output", true, "output json file");
+        output.setRequired(true);
+        options.addOption(output);
+
+
+        CommandLineParser parser = new DefaultParser();
+        CommandLine cmd = null;//not a good practice, it serves it purpose 
+
+        try {
+            cmd = parser.parse(options, args);
+        } catch (ParseException e) {
+            System.out.println(e.getMessage());
+         //   formatter.printHelp("utility-name", options);
+            System.exit(1);
+        }
+
+        String inputFilePath = cmd.getOptionValue("input");
+        String outputFilePath = cmd.getOptionValue("output");
+
+	
+		File inputfile = new File(inputFilePath);
+        File outputfile = new File(outputFilePath);
 		
-        List<Map<?, ?>> data = readObjectsFromCsv(input);
-        writeAsJson(data, output);
+        List<Map<?, ?>> data = readObjectsFromCsv(inputfile);
+        writeAsJson(data, outputfile);
     }
 
     public static List<Map<?, ?>> readObjectsFromCsv(File file) throws IOException {
